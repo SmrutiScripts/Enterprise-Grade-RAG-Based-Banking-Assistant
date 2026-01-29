@@ -1,6 +1,6 @@
 
 import streamlit as st
-from app.rag_pipeline import retrieve_context   
+from rag_pipeline import retrieve_context   
 
 st.set_page_config(page_title="USBank RAG Chatbot", layout="centered")
 

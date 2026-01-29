@@ -13,12 +13,12 @@ from langchain_community.vectorstores import FAISS
 from langchain_openai import OpenAIEmbeddings
 from langchain_core.documents import Document
 
-DATA_DIR = Path("data")
+DATA = Path("Data")
 FAISS_DIR = Path("embeddings/faiss_index")
 
 def load_pdfs() -> list[Document]:
     documents = []
-    for pdf in DATA_DIR.glob("*.pdf"):
+    for pdf in DATA.glob("*.pdf"):
         loader = PyPDFLoader(str(pdf))
         documents.extend(loader.load())
     return documents
